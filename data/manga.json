@@ -1,6 +1,6 @@
 [
   {
-    "id": "one-piece",
+    "id": "manga-01",
     "title": "One Piece",
     "author": "Oda Eiichiro",
     "genres": ["Action", "Adventure", "Shounen"],
@@ -10,7 +10,7 @@
     "cover_url": "https://example.com/covers/one-piece.jpg"
   },
   {
-    "id": "naruto",
+    "id": "manga-02",
     "title": "Naruto",
     "author": "Kishimoto Masashi",
     "genres": ["Action", "Adventure", "Shounen"],
@@ -20,7 +20,7 @@
     "cover_url": "https://example.com/covers/naruto.jpg"
   },
   {
-    "id": "attack-on-titan",
+    "id": "manga-03",
     "title": "Attack on Titan",
     "author": "Isayama Hajime",
     "genres": ["Action", "Drama", "Seinen"],
@@ -30,7 +30,7 @@
     "cover_url": "https://example.com/covers/aot.jpg"
   },
   {
-    "id": "bleach",
+    "id": "manga-04",
     "title": "Bleach",
     "author": "Kubo Tite",
     "genres": ["Action", "Supernatural", "Shounen"],
@@ -40,7 +40,7 @@
     "cover_url": "https://example.com/covers/bleach.jpg"
   },
   {
-    "id": "dragon-ball",
+    "id": "manga-05",
     "title": "Dragon Ball",
     "author": "Toriyama Akira",
     "genres": ["Action", "Adventure", "Shounen"],
@@ -50,7 +50,7 @@
     "cover_url": "https://example.com/covers/dragon-ball.jpg"
   },
   {
-    "id": "death-note",
+    "id": "manga-06",
     "title": "Death Note",
     "author": "Ohba Tsugumi",
     "genres": ["Mystery", "Thriller", "Shounen"],
@@ -60,7 +60,7 @@
     "cover_url": "https://example.com/covers/death-note.jpg"
   },
   {
-    "id": "fullmetal-alchemist",
+    "id": "manga-07",
     "title": "Fullmetal Alchemist",
     "author": "Arakawa Hiromu",
     "genres": ["Action", "Adventure", "Fantasy"],
@@ -70,7 +70,7 @@
     "cover_url": "https://example.com/covers/fma.jpg"
   },
   {
-    "id": "my-hero-academia",
+    "id": "manga-08",
     "title": "My Hero Academia",
     "author": "Horikoshi Kohei",
     "genres": ["Action", "Superhero", "Shounen"],
@@ -80,7 +80,7 @@
     "cover_url": "https://example.com/covers/mha.jpg"
   },
   {
-    "id": "demon-slayer",
+    "id": "manga-09",
     "title": "Demon Slayer",
     "author": "Gotouge Koyoharu",
     "genres": ["Action", "Supernatural", "Shounen"],
@@ -90,7 +90,7 @@
     "cover_url": "https://example.com/covers/demon-slayer.jpg"
   },
   {
-    "id": "jujutsu-kaisen",
+    "id": "manga-10",
     "title": "Jujutsu Kaisen",
     "author": "Akutami Gege",
     "genres": ["Action", "Dark Fantasy", "Shounen"],
@@ -99,7 +99,6 @@
     "description": "Curses and sorcerers battle in modern Japan.",
     "cover_url": "https://example.com/covers/jujutsu-kaisen.jpg"
   },
-
   {
     "id": "manga-11",
     "title": "Crimson Blade",
@@ -149,5 +148,255 @@
     "total_chapters": 210,
     "description": "Elite thieves pull impossible heists.",
     "cover_url": "https://example.com/covers/shadow-heist.jpg"
+  },
+  {
+    "id": "manga-16",
+    "title": "Ashen Kingdom",
+    "author": "Mori Kenta",
+    "genres": ["Fantasy", "Action"],
+    "status": "ongoing",
+    "total_chapters": 134,
+    "description": "A fallen kingdom rises amid endless war.",
+    "cover_url": "https://example.com/covers/ashen-kingdom.jpg"
+  },
+  {
+    "id": "manga-17",
+    "title": "Neon Pulse",
+    "author": "Choi Han",
+    "genres": ["Sci-Fi", "Thriller"],
+    "status": "completed",
+    "total_chapters": 88,
+    "description": "A detective hunts crimes in a neon-lit city.",
+    "cover_url": "https://example.com/covers/neon-pulse.jpg"
+  },
+  {
+    "id": "manga-18",
+    "title": "Frostbound",
+    "author": "Ivan Petrov",
+    "genres": ["Adventure", "Fantasy"],
+    "status": "ongoing",
+    "total_chapters": 76,
+    "description": "Survivors explore a world frozen by magic.",
+    "cover_url": "https://example.com/covers/frostbound.jpg"
+  },
+  {
+    "id": "manga-19",
+    "title": "Last Signal",
+    "author": "Smith Aaron",
+    "genres": ["Sci-Fi", "Drama"],
+    "status": "completed",
+    "total_chapters": 64,
+    "description": "Humanity receives its final message from space.",
+    "cover_url": "https://example.com/covers/last-signal.jpg"
+  },
+  {
+    "id": "manga-20",
+    "title": "Blood Circuit",
+    "author": "Kawasaki Ren",
+    "genres": ["Action", "Sci-Fi"],
+    "status": "ongoing",
+    "total_chapters": 190,
+    "description": "Underground fighters enhanced with cyber tech.",
+    "cover_url": "https://example.com/covers/blood-circuit.jpg"
+  },
+  {
+    "id": "manga-21",
+    "title": "Garden of Lies",
+    "author": "Yamada Riku",
+    "genres": ["Mystery", "Psychological"],
+    "status": "completed",
+    "total_chapters": 52,
+    "description": "A peaceful town hides dangerous secrets.",
+    "cover_url": "https://example.com/covers/garden-of-lies.jpg"
+  },
+  {
+    "id": "manga-22",
+    "title": "Storm Breaker",
+    "author": "Alvarez Diego",
+    "genres": ["Action", "Adventure"],
+    "status": "ongoing",
+    "total_chapters": 165,
+    "description": "A sailor commands the power of storms.",
+    "cover_url": "https://example.com/covers/storm-breaker.jpg"
+  },
+  {
+    "id": "manga-23",
+    "title": "Echoes of War",
+    "author": "Tran Hoang",
+    "genres": ["Drama", "Historical"],
+    "status": "completed",
+    "total_chapters": 101,
+    "description": "Generations shaped by a forgotten war.",
+    "cover_url": "https://example.com/covers/echoes-of-war.jpg"
+  },
+  {
+    "id": "manga-24",
+    "title": "Digital Souls",
+    "author": "Chen Wei",
+    "genres": ["Sci-Fi", "Philosophical"],
+    "status": "ongoing",
+    "total_chapters": 89,
+    "description": "Human minds trapped inside a virtual world.",
+    "cover_url": "https://example.com/covers/digital-souls.jpg"
+  },
+  {
+    "id": "manga-25",
+    "title": "Silent Blade",
+    "author": "Ito Masaru",
+    "genres": ["Action", "Samurai"],
+    "status": "completed",
+    "total_chapters": 143,
+    "description": "A ronin walks a path of vengeance.",
+    "cover_url": "https://example.com/covers/silent-blade.jpg"
+  },
+  {
+    "id": "manga-26",
+    "title": "Starbound Witch",
+    "author": "Olivia Hart",
+    "genres": ["Fantasy", "Magic"],
+    "status": "ongoing",
+    "total_chapters": 112,
+    "description": "A witch draws power from distant stars.",
+    "cover_url": "https://example.com/covers/starbound-witch.jpg"
+  },
+  {
+    "id": "manga-27",
+    "title": "Urban Exorcist",
+    "author": "Kang Minho",
+    "genres": ["Supernatural", "Action"],
+    "status": "ongoing",
+    "total_chapters": 204,
+    "description": "Curses infest a modern metropolis.",
+    "cover_url": "https://example.com/covers/urban-exorcist.jpg"
+  },
+  {
+    "id": "manga-28",
+    "title": "Broken Halo",
+    "author": "Miller James",
+    "genres": ["Fantasy", "Dark"],
+    "status": "completed",
+    "total_chapters": 97,
+    "description": "Angels fall in a corrupted heaven.",
+    "cover_url": "https://example.com/covers/broken-halo.jpg"
+  },
+  {
+    "id": "manga-29",
+    "title": "Quantum Runner",
+    "author": "Saito Ken",
+    "genres": ["Sci-Fi", "Action"],
+    "status": "ongoing",
+    "total_chapters": 156,
+    "description": "A courier runs across fractured timelines.",
+    "cover_url": "https://example.com/covers/quantum-runner.jpg"
+  },
+  {
+    "id": "manga-30",
+    "title": "Ivory Crown",
+    "author": "Leona Strauss",
+    "genres": ["Fantasy", "Politics"],
+    "status": "completed",
+    "total_chapters": 128,
+    "description": "Nobles clash for control of the throne.",
+    "cover_url": "https://example.com/covers/ivory-crown.jpg"
+  },
+  {
+    "id": "manga-31",
+    "title": "Rift Hunters",
+    "author": "Nguyen Quoc Anh",
+    "genres": ["Action", "Adventure"],
+    "status": "ongoing",
+    "total_chapters": 178,
+    "description": "Hunters seal dangerous dimensional rifts.",
+    "cover_url": "https://example.com/covers/rift-hunters.jpg"
+  },
+  {
+    "id": "manga-32",
+    "title": "Paper Hearts",
+    "author": "Kim Yuna",
+    "genres": ["Romance", "Slice of Life"],
+    "status": "completed",
+    "total_chapters": 60,
+    "description": "Love grows through handwritten letters.",
+    "cover_url": "https://example.com/covers/paper-hearts.jpg"
+  },
+  {
+    "id": "manga-33",
+    "title": "Gravebound",
+    "author": "Rossi Marco",
+    "genres": ["Horror", "Supernatural"],
+    "status": "ongoing",
+    "total_chapters": 92,
+    "description": "The dead refuse to stay buried.",
+    "cover_url": "https://example.com/covers/gravebound.jpg"
+  },
+  {
+    "id": "manga-34",
+    "title": "Solar Knights",
+    "author": "Ahmed Nabil",
+    "genres": ["Sci-Fi", "Adventure"],
+    "status": "completed",
+    "total_chapters": 140,
+    "description": "Warriors protect a dying star system.",
+    "cover_url": "https://example.com/covers/solar-knights.jpg"
+  },
+  {
+    "id": "manga-35",
+    "title": "Midnight Courier",
+    "author": "Liu Fang",
+    "genres": ["Action", "Crime"],
+    "status": "ongoing",
+    "total_chapters": 221,
+    "description": "Illegal deliveries in the dead of night.",
+    "cover_url": "https://example.com/covers/midnight-courier.jpg"
+  },
+  {
+    "id": "manga-36",
+    "title": "Crystal Requiem",
+    "author": "Hoshino Aya",
+    "genres": ["Fantasy", "Drama"],
+    "status": "completed",
+    "total_chapters": 83,
+    "description": "A kingdom pays the price of magic.",
+    "cover_url": "https://example.com/covers/crystal-requiem.jpg"
+  },
+  {
+    "id": "manga-37",
+    "title": "Zero Hour Academy",
+    "author": "Brown Lucas",
+    "genres": ["Action", "School"],
+    "status": "ongoing",
+    "total_chapters": 147,
+    "description": "Students train to prevent global disasters.",
+    "cover_url": "https://example.com/covers/zero-hour-academy.jpg"
+  },
+  {
+    "id": "manga-38",
+    "title": "Red Orchard",
+    "author": "Phan Duc Long",
+    "genres": ["Drama", "Mystery"],
+    "status": "completed",
+    "total_chapters": 55,
+    "description": "A rural town shaken by a hidden crime.",
+    "cover_url": "https://example.com/covers/red-orchard.jpg"
+  },
+  {
+    "id": "manga-39",
+    "title": "Void Ascension",
+    "author": "Nakamura Shun",
+    "genres": ["Sci-Fi", "Dark Fantasy"],
+    "status": "ongoing",
+    "total_chapters": 167,
+    "description": "A man gains power from the cosmic void.",
+    "cover_url": "https://example.com/covers/void-ascension.jpg"
+  },
+  {
+    "id": "manga-40",
+    "title": "Golden Path",
+    "author": "Elena Moretti",
+    "genres": ["Adventure", "Philosophical"],
+    "status": "completed",
+    "total_chapters": 90,
+    "description": "A journey to understand the meaning of life.",
+    "cover_url": "https://example.com/covers/golden-path.jpg"
   }
 ]

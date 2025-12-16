@@ -9,11 +9,11 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"mangahub/internal/auth"
+	mangamod "mangahub/internal/manga"
 	tcpmod "mangahub/internal/tcp"
 	udpmod "mangahub/internal/udp"
 	"mangahub/internal/user"
 	"mangahub/pkg/database"
-	
 )
 
 func main() {
@@ -30,6 +30,14 @@ func main() {
 		log.Fatalf("migrate: %v", err)
 	}
 
+	// ===== Seed manga if empty =====
+	if err := mangamod.SeedIfEmpty(db, "./data/manga.json"); err != nil {
+		log.Fatalf("seed manga: %v", err)
+	}
+
+	// ===== Services & repos =====
+	authSvc := auth.NewService(db, jwtSecret)
+	mangaRepo := mangamod.NewRepo(db)
 	userRepo := user.NewRepo(db)
 
 	// ===== External services clients =====
@@ -39,9 +47,17 @@ func main() {
 	// ===== HTTP Router =====
 	r := gin.Default()
 
+	// ===== Public routes =====
+	auth.RegisterRoutes(r, authSvc)
+	mangamod.RegisterRoutes(r, mangaRepo)
+
+	// ===== Protected routes =====
 	authed := r.Group("/", auth.JWTMiddleware(jwtSecret))
 
-	// ===== PUT /users/progress (HTTP → TCP) =====
+	// Library routes
+	user.RegisterLibraryRoutes(authed, userRepo)
+
+	// PUT /users/progress (HTTP → DB → TCP broadcast)
 	authed.PUT("/users/progress", func(c *gin.Context) {
 		var req user.UpdateProgressRequest
 		if err := c.ShouldBindJSON(&req); err != nil {
@@ -50,18 +66,12 @@ func main() {
 		}
 
 		userID := auth.GetUserID(c)
-
-		if err := userRepo.UpdateProgress(
-			userID,
-			req.MangaID,
-			req.Chapter,
-			req.Status,
-		); err != nil {
+		if err := userRepo.UpdateProgress(userID, req.MangaID, req.Chapter, req.Status); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 			return
 		}
 
-		// Trigger TCP broadcast (bắt buộc theo spec)
+		// trigger TCP broadcast (best-effort)
 		_ = tcpNotifier.SendProgressUpdate(tcpmod.ProgressUpdate{
 			UserID:    userID,
 			MangaID:   req.MangaID,
@@ -72,7 +82,7 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{"ok": true})
 	})
 
-	// ===== POST /admin/notify (HTTP → UDP) =====
+	// POST /admin/notify (HTTP → UDP broadcast)
 	authed.POST("/admin/notify", func(c *gin.Context) {
 		var req udpmod.NotifyRequest
 		if err := c.ShouldBindJSON(&req); err != nil {
