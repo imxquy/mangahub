@@ -7,13 +7,15 @@ import (
 	"time"
 )
 
-type RegisterMessage struct {
-	Type   string `json:"type"`   
-	UserID string `json:"user_id"`
+type Message struct {
+	Type    string `json:"type"` // "register" | "broadcast"
+	UserID  string `json:"user_id,omitempty"`
+	MangaID string `json:"manga_id,omitempty"`
+	Message string `json:"message,omitempty"`
 }
 
 type Notification struct {
-	Type      string `json:"type"` 
+	Type      string `json:"type"` // "chapter_release"
 	MangaID   string `json:"manga_id"`
 	Message   string `json:"message"`
 	Timestamp int64  `json:"timestamp"`
@@ -23,7 +25,7 @@ type Server struct {
 	addr    string
 	conn    *net.UDPConn
 	mu      sync.Mutex
-	clients map[string]*net.UDPAddr // key = addr.String()
+	clients map[string]*net.UDPAddr
 }
 
 func NewServer(addr string) *Server {
@@ -35,34 +37,34 @@ func NewServer(addr string) *Server {
 
 func (s *Server) Run() error {
 	udpAddr, err := net.ResolveUDPAddr("udp", s.addr)
-	if err != nil {
-		return err
-	}
+	if err != nil { return err }
+
 	c, err := net.ListenUDP("udp", udpAddr)
-	if err != nil {
-		return err
-	}
+	if err != nil { return err }
 	s.conn = c
 
-	buf := make([]byte, 2048)
+	buf := make([]byte, 4096)
 	for {
 		n, clientAddr, err := s.conn.ReadFromUDP(buf)
-		if err != nil {
+		if err != nil { continue }
+
+		var m Message
+		if err := json.Unmarshal(buf[:n], &m); err != nil {
 			continue
 		}
 
-		var reg RegisterMessage
-		if err := json.Unmarshal(buf[:n], &reg); err != nil {
-			continue
-		}
-		if reg.Type == "register" {
+		switch m.Type {
+		case "register":
 			s.mu.Lock()
 			s.clients[clientAddr.String()] = clientAddr
 			s.mu.Unlock()
+			_, _ = s.conn.WriteToUDP([]byte(`{"type":"registered"}`), clientAddr)
 
-			// optional ack
-			ack := []byte(`{"type":"registered"}`)
-			_, _ = s.conn.WriteToUDP(ack, clientAddr)
+		case "broadcast":
+			// API gửi lệnh broadcast vào đây
+			if m.MangaID != "" && m.Message != "" {
+				s.BroadcastChapterRelease(m.MangaID, m.Message)
+			}
 		}
 	}
 }

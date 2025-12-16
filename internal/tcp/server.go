@@ -59,6 +59,12 @@ func (s *Server) handleConn(c net.Conn) {
 
 	sc := bufio.NewScanner(c)
 	for sc.Scan() {
+		line := sc.Bytes()
+
+		var pu ProgressUpdate
+		if err := json.Unmarshal(line, &pu); err == nil && pu.UserID != "" && pu.MangaID != "" {
+			s.Broadcast <- pu
+		}
 	}
 }
 

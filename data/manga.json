@@ -1,0 +1,153 @@
+[
+  {
+    "id": "one-piece",
+    "title": "One Piece",
+    "author": "Oda Eiichiro",
+    "genres": ["Action", "Adventure", "Shounen"],
+    "status": "ongoing",
+    "total_chapters": 1100,
+    "description": "A young pirate's adventure in search of the ultimate treasure.",
+    "cover_url": "https://example.com/covers/one-piece.jpg"
+  },
+  {
+    "id": "naruto",
+    "title": "Naruto",
+    "author": "Kishimoto Masashi",
+    "genres": ["Action", "Adventure", "Shounen"],
+    "status": "completed",
+    "total_chapters": 700,
+    "description": "A ninja's journey to become Hokage.",
+    "cover_url": "https://example.com/covers/naruto.jpg"
+  },
+  {
+    "id": "attack-on-titan",
+    "title": "Attack on Titan",
+    "author": "Isayama Hajime",
+    "genres": ["Action", "Drama", "Seinen"],
+    "status": "completed",
+    "total_chapters": 139,
+    "description": "Humanity fights for survival against giant titans.",
+    "cover_url": "https://example.com/covers/aot.jpg"
+  },
+  {
+    "id": "bleach",
+    "title": "Bleach",
+    "author": "Kubo Tite",
+    "genres": ["Action", "Supernatural", "Shounen"],
+    "status": "completed",
+    "total_chapters": 686,
+    "description": "A teenager gains the powers of a Soul Reaper.",
+    "cover_url": "https://example.com/covers/bleach.jpg"
+  },
+  {
+    "id": "dragon-ball",
+    "title": "Dragon Ball",
+    "author": "Toriyama Akira",
+    "genres": ["Action", "Adventure", "Shounen"],
+    "status": "completed",
+    "total_chapters": 519,
+    "description": "Martial artists search for the Dragon Balls.",
+    "cover_url": "https://example.com/covers/dragon-ball.jpg"
+  },
+  {
+    "id": "death-note",
+    "title": "Death Note",
+    "author": "Ohba Tsugumi",
+    "genres": ["Mystery", "Thriller", "Shounen"],
+    "status": "completed",
+    "total_chapters": 108,
+    "description": "A notebook that grants the power to kill.",
+    "cover_url": "https://example.com/covers/death-note.jpg"
+  },
+  {
+    "id": "fullmetal-alchemist",
+    "title": "Fullmetal Alchemist",
+    "author": "Arakawa Hiromu",
+    "genres": ["Action", "Adventure", "Fantasy"],
+    "status": "completed",
+    "total_chapters": 116,
+    "description": "Two brothers search for the Philosopher's Stone.",
+    "cover_url": "https://example.com/covers/fma.jpg"
+  },
+  {
+    "id": "my-hero-academia",
+    "title": "My Hero Academia",
+    "author": "Horikoshi Kohei",
+    "genres": ["Action", "Superhero", "Shounen"],
+    "status": "ongoing",
+    "total_chapters": 430,
+    "description": "A world where heroes are trained in academies.",
+    "cover_url": "https://example.com/covers/mha.jpg"
+  },
+  {
+    "id": "demon-slayer",
+    "title": "Demon Slayer",
+    "author": "Gotouge Koyoharu",
+    "genres": ["Action", "Supernatural", "Shounen"],
+    "status": "completed",
+    "total_chapters": 205,
+    "description": "A boy fights demons to save his sister.",
+    "cover_url": "https://example.com/covers/demon-slayer.jpg"
+  },
+  {
+    "id": "jujutsu-kaisen",
+    "title": "Jujutsu Kaisen",
+    "author": "Akutami Gege",
+    "genres": ["Action", "Dark Fantasy", "Shounen"],
+    "status": "ongoing",
+    "total_chapters": 260,
+    "description": "Curses and sorcerers battle in modern Japan.",
+    "cover_url": "https://example.com/covers/jujutsu-kaisen.jpg"
+  },
+
+  {
+    "id": "manga-11",
+    "title": "Crimson Blade",
+    "author": "Tanaka Hiro",
+    "genres": ["Action", "Fantasy"],
+    "status": "ongoing",
+    "total_chapters": 120,
+    "description": "A wandering swordsman seeks redemption.",
+    "cover_url": "https://example.com/covers/crimson-blade.jpg"
+  },
+  {
+    "id": "manga-12",
+    "title": "Skyfall Legends",
+    "author": "Lee Minjun",
+    "genres": ["Adventure", "Fantasy"],
+    "status": "ongoing",
+    "total_chapters": 98,
+    "description": "Floating islands and ancient secrets.",
+    "cover_url": "https://example.com/covers/skyfall-legends.jpg"
+  },
+  {
+    "id": "manga-13",
+    "title": "Iron Code",
+    "author": "Park Jisoo",
+    "genres": ["Sci-Fi", "Action"],
+    "status": "completed",
+    "total_chapters": 150,
+    "description": "A cyberpunk rebellion against AI rule.",
+    "cover_url": "https://example.com/covers/iron-code.jpg"
+  },
+  {
+    "id": "manga-14",
+    "title": "Moonlit Promise",
+    "author": "Sato Aiko",
+    "genres": ["Romance", "Drama"],
+    "status": "completed",
+    "total_chapters": 72,
+    "description": "A love story under the moonlight.",
+    "cover_url": "https://example.com/covers/moonlit-promise.jpg"
+  },
+  {
+    "id": "manga-15",
+    "title": "Shadow Heist",
+    "author": "Nguyen Minh",
+    "genres": ["Action", "Crime"],
+    "status": "ongoing",
+    "total_chapters": 210,
+    "description": "Elite thieves pull impossible heists.",
+    "cover_url": "https://example.com/covers/shadow-heist.jpg"
+  }
+]

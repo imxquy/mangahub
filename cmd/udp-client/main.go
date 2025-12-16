@@ -1,19 +1,32 @@
 package main
 
 import (
+	"fmt"
 	"net"
 )
 
 func main() {
-	addr, _ := net.ResolveUDPAddr("udp", "127.0.0.1:9091")
-	c, _ := net.DialUDP("udp", nil, addr)
-	defer c.Close()
+	server, err := net.ResolveUDPAddr("udp", "127.0.0.1:9091")
+	if err != nil {
+		panic(err)
+	}
 
-	c.Write([]byte(`{"type":"register","user_id":"u1"}`))
+	conn, err := net.DialUDP("udp", nil, server)
+	if err != nil {
+		panic(err)
+	}
+	defer conn.Close()
 
-	buf := make([]byte, 2048)
+	// Register
+	_, _ = conn.Write([]byte(`{"type":"register","user_id":"u1"}`))
+	fmt.Println("UDP client registered. Waiting for notifications on same socket...")
+
+	buf := make([]byte, 4096)
 	for {
-		n, _, _ := c.ReadFromUDP(buf)
-		println(string(buf[:n]))
+		n, _, err := conn.ReadFromUDP(buf)
+		if err != nil {
+			continue
+		}
+		fmt.Println("<<", string(buf[:n]))
 	}
 }
