@@ -11,6 +11,7 @@ import (
 	"mangahub/pkg/database"
 
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 )
 
 type server struct {
@@ -43,13 +44,16 @@ func main() {
 
 	s := grpc.NewServer()
 
-	// ===== Register gRPC service with injected deps =====
+	// ===== Register gRPC service =====
 	pb.RegisterMangaServiceServer(s, &server{
 		db:          db,
 		tcpNotifier: tcpNotifier,
 	})
 
-	log.Println("gRPC listening on :9092")
+	// ===== ENABLE gRPC REFLECTION =====
+	reflection.Register(s)
+
+	log.Println("gRPC listening on :9092 (reflection enabled)")
 	log.Fatal(s.Serve(lis))
 }
 

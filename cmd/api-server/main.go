@@ -46,6 +46,13 @@ func main() {
 
 	// ===== HTTP Router =====
 	r := gin.Default()
+	//health
+	r.GET("/health", func(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"ok":      true,
+		"service": "api",
+		"time":    time.Now().Unix(),
+	})})
 
 	// ===== Public routes =====
 	auth.RegisterRoutes(r, authSvc)
